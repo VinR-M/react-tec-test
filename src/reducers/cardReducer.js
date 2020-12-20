@@ -3,7 +3,6 @@ import { FETCH_CARDS, FETCH_DETAILS }  from '../actions/types'
 const initialState = {
     cardItems: [],
     detailsItem: {},
-    searchItem: {},
     editItem: {},
 }
 
@@ -20,12 +19,6 @@ export default function(state = initialState, action) {
                 ...state,
                 detailsItem: action.payload
             }
-
-        // case SEARCH_CARD:  
-        //     return {
-        //         ...state,
-        //         searchItem: action.payload
-        //     }
 
         // case EDIT_CARD:  
         //     return {

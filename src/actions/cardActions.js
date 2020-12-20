@@ -34,7 +34,7 @@ export const fetchDetails = (id) => dispatch => {
       body: JSON.stringify({ query: `
       
 		query {	
-			Country(alpha2Code: "${id}" ) {
+			Country(name: "${id}" ) {
 				alpha2Code
 				name
 				capital
