@@ -1,7 +1,7 @@
-const FETCH_CARDS = 'FETCH_CARDS'
-const FETCH_DETAILS = 'FETCH_DETAILS'
-const SEARCH_CARD = 'SEARCH_CARD'
-const EDIT_CARD = 'EDIT_CARD'
+export const FETCH_CARDS = 'FETCH_CARDS'
+export const FETCH_DETAILS = 'FETCH_DETAILS'
+export const SEARCH_CARD = 'SEARCH_CARD'
+export const EDIT_CARD = 'EDIT_CARD'
 
 // fetch('https://countries-274616.ew.r.appspot.com', {
 	//   method: 'POST',
@@ -16,7 +16,7 @@ const EDIT_CARD = 'EDIT_CARD'
 	// 				emojiUnicode
 	// 				svgFile
 	// 			}
-	// 				convertedArea(areaUnit: SQUARE_KILOMETERS) {
+	// 			convertedArea(areaUnit: SQUARE_KILOMETERS) {
 	// 				value
 	// 			}
 	// 			population

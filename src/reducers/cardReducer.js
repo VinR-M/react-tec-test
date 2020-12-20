@@ -1,10 +1,10 @@
-import  FETCH_CARDS  from '../actions/types'
+import { FETCH_CARDS, FETCH_DETAILS }  from '../actions/types'
 
 const initialState = {
     cardItems: [],
     detailsItem: {},
     searchItem: {},
-    editItem: {}
+    editItem: {},
 }
 
 export default function(state = initialState, action) {
@@ -15,11 +15,11 @@ export default function(state = initialState, action) {
                 cardItems: action.payload
             }
 
-        // case FETCH_DETAILS:  
-        //     return {
-        //         ...state,
-        //         detailsItem: action.payload
-        //     }
+        case FETCH_DETAILS:  
+            return {
+                ...state,
+                detailsItem: action.payload
+            }
 
         // case SEARCH_CARD:  
         //     return {
