@@ -1,4 +1,4 @@
-import { FETCH_CARDS, FETCH_DETAILS }  from '../actions/types'
+import { EDIT_CARD, FETCH_CARDS, FETCH_DETAILS }  from '../actions/types'
 
 export const fetchCards = () => dispatch => {
     fetch('https://countries-274616.ew.r.appspot.com', {
@@ -55,8 +55,13 @@ export const fetchDetails = (id) => dispatch => {
 	` })
 	})
 	  .then(res => res.json())
-	  .then(cards => dispatch({
+	  .then(cardDets => dispatch({
 		type: FETCH_DETAILS,
-		payload: cards.data.Country
+		payload: cardDets.data.Country
       }))
+}
+
+export const editCard = (formData) => dispatch => {
+	// type: EDIT_CARD,
+	//payload: formData
 }

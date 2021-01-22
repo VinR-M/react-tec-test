@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Link } from 'react-router-dom'
+import { Search } from "../styles"
 
 class SearchBar extends Component {
   constructor() {
@@ -23,19 +24,22 @@ class SearchBar extends Component {
   render() {
     return (
       <form className="form-inline mt-3 mb-5">
-        <div className="form-group mb-2 mr-2">
-          <input
-            type="text"
-            className="form-control-plaintext bg-light rounded"
-            name="search"
-            placeholder="Search for a Country..."
-            onChange={this.handleChange}
-            value={this.state.search}
-          />
-        </div>
-        <Link to={`/Details/${this.state.search}`}>
-          <button  className="btn btn-secondary mb-2"> Search </button>
-        </Link>
+        <Search className="row">
+          <div className="form-group mb-2 mr-2">
+          
+            <input
+              type="text"
+              className="form-control-plaintext bg-light rounded"
+              name="search"
+              placeholder="Search for a Country..."
+              onChange={this.handleChange}
+              value={this.state.search}
+            />
+          </div>
+          <Link to={`/Details/${this.state.search}`}>
+            <button  className="btn btn-secondary mb-2"> Search </button>
+          </Link>
+        </Search>
       </form>
     )
   }
